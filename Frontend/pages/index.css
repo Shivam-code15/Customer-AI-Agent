@@ -1,0 +1,146 @@
+/* styles/index.css - Homepage specific styles */
+
+.homepage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* ---------- Hero Section ---------- */
+  .hero-section {
+    background: linear-gradient(135deg, #f0f7f0 0%, #f5f9f5 100%);
+    color: var(--brand-text);
+    padding: 80px 0 100px 0;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #555555;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-section {
+    margin-top: 40px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #7CB342, #8BC34A);
+    color: white;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: var(--brand-border-radius);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(124, 179, 66, 0.3);
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(124, 179, 66, 0.4);
+    text-decoration: none;
+    color: white;
+  }
+  
+  .login-hint {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666666;
+  }
+  
+  /* ---------- Features Section ---------- */
+  .features-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  .feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .feature-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--brand-primary);
+  }
+  
+  .feature-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  /* ---------- Responsive Design ---------- */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 60px 0 80px 0;
+    }
+  
+    .hero-title {
+      font-size: 32px;
+    }
+  
+    .hero-subtitle {
+      font-size: 18px;
+    }
+  
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  
+    .feature-card {
+      padding: 30px 20px;
+    }
+  
+    .cta-button {
+      padding: 14px 28px;
+      font-size: 16px;
+    }
+  }

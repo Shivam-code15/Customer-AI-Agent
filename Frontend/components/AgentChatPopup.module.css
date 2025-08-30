@@ -1,0 +1,312 @@
+/* Floating chat toggle button */
+.toggleButton {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 76, 84, 0.3);
+  z-index: 10001;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.toggleButton:hover {
+  background: linear-gradient(135deg, var(--brand-primary-dark) 0%, var(--brand-primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 76, 84, 0.4);
+}
+
+.toggleButton.hasNotification {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 8px 25px rgba(0, 76, 84, 0.3), 0 0 0 0 rgba(0, 76, 84, 0.4);
+  }
+  70% {
+    box-shadow: 0 8px 25px rgba(0, 76, 84, 0.3), 0 0 0 10px rgba(0, 76, 84, 0);
+  }
+  100% {
+    box-shadow: 0 8px 25px rgba(0, 76, 84, 0.3), 0 0 0 0 rgba(0, 76, 84, 0);
+  }
+}
+
+.buttonContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatIcon {
+  font-size: 26px;
+  transition: all 0.3s ease;
+}
+
+.closeIcon {
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  background: #ff4444;
+  border-radius: 50%;
+  border: 2px solid white;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Chat hint tag */
+.chatTag {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 6px 20px rgba(0, 76, 84, 0.3);
+  z-index: 10002;
+  animation: slideInUp 0.5s ease-out, fadeInScale 0.5s ease-out;
+  max-width: 280px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tagContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.tagIcon {
+  font-size: 16px;
+}
+
+.tagText {
+  line-height: 1.4;
+}
+
+.closeTag {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 2px;
+  line-height: 1;
+  transition: opacity 0.3s ease;
+  margin-left: 4px;
+}
+
+.closeTag:hover {
+  opacity: 0.7;
+}
+
+/* Popup overlay for mobile */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+}
+
+/* Popup container */
+.popupPanel {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 420px;
+  height: 600px;
+  background: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+  overflow: hidden;
+  animation: slideInUpPanel 0.3s ease-out;
+  border: 1px solid rgba(0, 76, 84, 0.1);
+}
+
+@keyframes slideInUpPanel {
+  from {
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .toggleButton {
+    width: 56px;
+    height: 56px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .chatIcon {
+    font-size: 24px;
+  }
+
+  .closeIcon {
+    font-size: 26px;
+  }
+
+  .chatTag {
+    bottom: 90px;
+    right: 20px;
+    max-width: 250px;
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  .tagIcon {
+    font-size: 14px;
+  }
+
+  .popupPanel {
+    width: calc(100vw - 40px);
+    height: calc(100vh - 140px);
+    bottom: 90px;
+    right: 20px;
+    max-width: 400px;
+    max-height: 600px;
+  }
+
+  .popupOverlay {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .toggleButton {
+    width: 52px;
+    height: 52px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .chatTag {
+    bottom: 80px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+    width: calc(100% - 32px);
+  }
+
+  .popupPanel {
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    max-width: none;
+    max-height: none;
+  }
+
+  .popupOverlay {
+    display: none; /* Don't show overlay on mobile when fullscreen */
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .popupPanel {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .toggleButton,
+  .chatTag,
+  .popupPanel {
+    animation: none;
+  }
+
+  .toggleButton.hasNotification {
+    animation: none;
+  }
+
+  .notificationBadge {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .toggleButton {
+    border: 2px solid white;
+  }
+
+  .chatTag {
+    border: 2px solid white;
+  }
+
+  .popupPanel {
+    border: 2px solid var(--brand-primary);
+  }
+}

@@ -1,0 +1,171 @@
+.header {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 76, 84, 0.3);
+  flex-wrap: nowrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.tagline {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--brand-font-body);
+  font-weight: 400;       /* lighter font weight */
+  font-size: 0.85rem;     /* smaller font size */
+  max-width: 250px;
+  white-space: nowrap;
+  text-align: right;
+  gap: 10px;              /* spacing between tagline text and image */
+}
+
+.logoImage {
+  height: 55px;
+  width: auto;
+  display: block;
+}
+
+.taglineImage {
+  height: 40px;           /* reduced height for private label */
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin-left: 8px;       /* optional margin */
+}
+
+.logoLink {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.logoLink:hover {
+  opacity: 0.8;
+}
+
+.navLink {
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Chat and Logout buttons */
+
+.chatButton {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--brand-border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+}
+
+.chatButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  color: white;
+}
+
+.logoutButton {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--brand-border-radius);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin-left: 20px;
+  backdrop-filter: blur(10px);
+  user-select: none;
+}
+
+.logoutButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .nav {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .tagline {
+    margin-left: 0;
+    text-align: center;
+    white-space: normal;
+    margin-top: 8px;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+    font-size: 0.75rem;
+    max-width: none;
+    gap: 8px;
+  }
+
+  .logoImage,
+  .taglineImage {
+    height: 30px;
+  }
+
+  .chatButton {
+    margin-top: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .logoutButton {
+    margin-left: 0;
+    margin-top: 12px;
+    width: 100%;
+    max-width: 300px;
+  }
+}

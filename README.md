@@ -8,19 +8,16 @@ This repository hosts the source code for an AI-powered Customer Service Agent n
 - Integration with GenAI tools such as Claude to generate context-aware responses.
 - CSS for styling to ensure a user-friendly interface.
 
-## Key Features ✨
+## Key Features 
 - Natural Language Processing-powered customer query handling.
 - Real-time synchronization with enterprise ERP (e.g., NetSuite) systems.
 - Secure session management and user authentication using CORS.
 - Scalable architecture leveraging AWS cloud services.
 - Modern tech stack: FastAPI, React/Next.js, Python, and AI tools.
 
-## What You Can Learn 📚
+## What You Can Learn 
 - How to develop an AI-powered customer service platform end-to-end.
 - Techniques to integrate generative AI models with enterprise backend data.
 - Best practices in building scalable web applications on AWS.
 - Methods to maintain secure session and data synchronization across multiple platforms.
 - Practical usage of prompt engineering and AI-assisted automation.
-
-## Project Status 🚧
-This project is currently under active development with new features and improvements planned.

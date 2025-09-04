@@ -23,8 +23,8 @@ export default function Header() {
       <div className={styles.brand}>
         <Link href="/" className={styles.logoLink}>
           <Image
-            src="/Company-Logo.png"
-            alt="Company Name"
+            src="/Stage of Art-Logo.png"
+            alt="Stage of Art"
             width={160}
             height={60}
             priority
@@ -36,7 +36,7 @@ export default function Header() {
       <div className={styles.tagline}>
         <Image
           src="/Tagline.png"
-          alt="Tagline"
+          alt="Every Artist Has A Stage"
           width={180}
           height={60}
           className={styles.taglineImage}

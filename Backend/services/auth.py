@@ -9,7 +9,7 @@ from fastapi.security import OAuth2PasswordBearer
 from jose import jwt, JWTError, ExpiredSignatureError  # Removed JWTClaimsError import
 
 # Environment variables with proper validation
-SECRET_KEY = os.environ.get("SECRET_KEY", "12Au23432GNfcsdi23sdcCVUGB2132VInbcsdkc213")
+SECRET_KEY = os.environ.get("SECRET_KEY", "12Au23432HBFrsdi23sdcCVUGB2132VInbcsdkc213")
 ALGORITHM = os.environ.get("ALGORITHM", "HS256")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES", "60"))
 

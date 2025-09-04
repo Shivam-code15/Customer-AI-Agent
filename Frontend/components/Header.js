@@ -23,8 +23,8 @@ export default function Header() {
       <div className={styles.brand}>
         <Link href="/" className={styles.logoLink}>
           <Image
-            src="/Eagle-Logo.png"
-            alt="Eagle Beverage Products Logo"
+            src="/Company-Logo.png"
+            alt="Company Name"
             width={160}
             height={60}
             priority
@@ -35,8 +35,8 @@ export default function Header() {
 
       <div className={styles.tagline}>
         <Image
-          src="/PrivateLabel.png"
-          alt="Private Label Beverage Products"
+          src="/Tagline.png"
+          alt="Tagline"
           width={180}
           height={60}
           className={styles.taglineImage}

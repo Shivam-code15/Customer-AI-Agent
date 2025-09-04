@@ -55,7 +55,7 @@ export default function AgentChatPopup() {
           display: 'flex', alignItems: 'center', gap: '8px', maxWidth: '280px'
         }}>
           <span>🤖</span>
-          <span>Need help? Chat with Oddjob!</span>
+          <span>Need help? Chat with MJ!</span>
           <button onClick={() => setShowTag(false)} style={{
             background: 'none', border: 'none', color: 'white',
             cursor: 'pointer', fontSize: '18px', padding: '0 4px'

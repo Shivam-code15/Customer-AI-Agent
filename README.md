@@ -1,2 +1,2 @@
 # Customer-Agent
-Oddjob, AI Agent
+MJ, AI Agent

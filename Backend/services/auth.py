@@ -14,7 +14,7 @@ ALGORITHM = os.environ.get("ALGORITHM", "HS256")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES", "60"))
 
 # Configurable CSV path
-CUSTOMER_CSV_PATH = Path.home() / "Downloads" / "Customer_2.csv"
+CUSTOMER_CSV_PATH = Path.home() / "Downloads" / "Customer_File.csv"
 
 # Setup logging
 logger = logging.getLogger(__name__)

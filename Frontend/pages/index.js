@@ -24,7 +24,7 @@ export default function Home() {
                     View Your Orders
                   </Link>
                   <p className="login-hint">
-                    Check your order status or chat with Oddjob, our AI assistant
+                    Check your order status or chat with MJ, our AI assistant
                   </p>
                 </>
               ) : (
@@ -33,7 +33,7 @@ export default function Home() {
                     Access Your Account
                   </Link>
                   <p className="login-hint">
-                    Use your unique customer ID to view order details and chat with our AI assistant, Oddjob
+                    Use your unique customer ID to view order details and chat with our AI assistant, MJ
                   </p>
                 </>
               )}
@@ -54,7 +54,7 @@ export default function Home() {
 
             <div className="feature-card">
               <div className="feature-icon">🤖</div>
-              <h3>Oddjob AI Assistant</h3>
+              <h3>MJ AI Assistant</h3>
               <p>Get instant answers to your questions through our intelligent chatbot support system</p>
             </div>
 

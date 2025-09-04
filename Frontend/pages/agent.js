@@ -108,7 +108,7 @@ export default function AgentChatPage({ isPopup, messages, setMessages }) {
             <div className={styles.agentInfo}>
               <div className={styles.agentAvatar}>🤖</div>
               <div className={styles.agentDetails}>
-                <h2 className={styles.agentName}>Oddjob, AI Assistant</h2>
+                <h2 className={styles.agentName}>MJ, AI Assistant</h2>
                 <span className={styles.agentStatus}>
                   <span className={styles.statusDot}></span>
                   Online
@@ -128,7 +128,7 @@ export default function AgentChatPage({ isPopup, messages, setMessages }) {
           {messages.length === 0 && (
             <div className={styles.welcomeMessage}>
               <div className={styles.welcomeIcon}>👋</div>
-              <h3>Welcome to Oddjob</h3>
+              <h3>Welcome to MJ</h3>
               <p>I'm here to help you with your orders and any questions you might have.</p>
               <div className={styles.suggestedQuestions}>
                 <p>Try asking:</p>

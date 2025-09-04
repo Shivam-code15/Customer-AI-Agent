@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <p>&copy; 2025 Eagle Beverage Products. All rights reserved.</p>
+        <p>&copy; 2025 Stage of Art. All rights reserved.</p>
       </div>
     </footer>
   );
